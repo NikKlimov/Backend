@@ -1,0 +1,191 @@
+{
+	"info": {
+		"_postman_id": "77353600-a49c-44d4-b5b7-72a7ca6bbc51",
+		"name": "Lab3 (Климов)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29630589"
+	},
+	"item": [
+		{
+			"name": "Поиск деклараций",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/products/search/"
+			},
+			"response": []
+		},
+		{
+			"name": "Декаларация",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/products/1/"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить декларацию",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"asdfasdfasfd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/products/1/update/"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить картинку",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/jmiha/YandexDisk/Вуз/РИП/Клеша/Картинки/3.jpg"
+						}
+					]
+				},
+				"url": "http://localhost:8000/api/products/1/update_image/"
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить декларацию",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/products/1/delete/"
+			},
+			"response": []
+		},
+		{
+			"name": "Создать декларацию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8000/api/products/create/"
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить декларацию в заявку",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8000/api/products/3/add_to_order/"
+			},
+			"response": []
+		},
+		{
+			"name": "Поиск заявок",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/orders/search/"
+			},
+			"response": []
+		},
+		{
+			"name": "Заявка",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8000/api/orders/2/"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить заявку",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"value\": 56\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/orders/2/update/"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить статус заявки пользователем",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": "http://localhost:8000/api/orders/31/update_status_user/"
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить статус заявки модератором",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/orders/31/update_status_admin/"
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить заявку",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/orders/3/delete/"
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить декларацию из заявки",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8000/api/orders/30/delete_product/4/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/api/orders/31/update_product/4/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"count\": 228\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/api/orders/30/update_product/4/"
+			},
+			"response": []
+		}
+	]
+}
